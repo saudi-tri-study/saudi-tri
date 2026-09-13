@@ -48,8 +48,8 @@ the script does with it.
   `economicactivity_en` values.
 - **Transformation in script** The 44 industry rows are averaged to the 19 GOSI
   activities, then logged and min–max normalised across sectors to give
-  `sector.score` ∈ [0, 1] (line 90 floors Real estate activities at 0.001 so the
-  geometric mean stays defined).
+  `sector.score` ∈ [0, 1]. Real estate activities is floored at 0.001 so the
+  geometric mean stays defined.
 - **Manuscript citation** Described in §3.1 and Appendix A.
 
 ## 3. Occupational green potential — Rutzer et al.
