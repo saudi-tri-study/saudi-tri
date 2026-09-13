@@ -65,7 +65,7 @@ sum(emp_data$numberofemployees[is.na(emp_data$ISCO3) | emp_data$ISCO3==0 |
 # --- sector emission intensity (IMF) ------------------------------------------
 # Sectors from IMF emission intensity of GVA table (Climate dashboard. USE most recent available year (2018))
 emintens <- read.xlsx(here::here("Data", "saudi_emission_intensity_and_greenjob_potential.xlsx"),
-                      sheet = 1, cols = c(12,37))
+                      sheet = "Emission intensity SAUDI", cols = c(12,37))
 
 # Average over multiple-entry sectors (to match KSA labor data granularity)
 emintens <- emintens %>% group_by(economicactivity_en) %>% summarise(emintens = mean(y2018))
@@ -92,7 +92,7 @@ emp_data$sector.score[emp_data$economicactivity_en=="Real estate activities"] <-
 # --- occupation green potential (Rutzer et al.) -------------------------------
 # Green job potential scores from Rutzer et al (2018); Lobsiger & Rutzer (2021) [ISCO3 level to match KSA labor data]
 greenjobs <- read.xlsx(here::here("Data", "saudi_emission_intensity_and_greenjob_potential.xlsx"),
-                       sheet = 3, cols = c(4,5,6), startRow = 4)
+                       sheet = "Green potential scores (ISCO)", cols = c(4,5,6), startRow = 4)
 
 
 greenjobs <- filter(greenjobs, !is.na(ISCO3))
@@ -107,7 +107,7 @@ emp_data <- merge(emp_data, greenjobs, by=c("ISCO3"))
 # Regional unemployment rates from SAUDI LFS 2019q4 and 2022q4 (by gender)
 
 # Normalization within year, and gender. Make use of gender-specific unemployment rates.
-unemp <- read.xlsx(here::here("Data", "saudi_unemp_19_22_q4_orig.xlsx"), sheet = 3)
+unemp <- read.xlsx(here::here("Data", "saudi_unemp_19_22_q4_orig.xlsx"), sheet = "combined")
 
 # The workbook ships a pre-computed unemp.score alongside the raw rate. Rebuild it
 # here so all three pillars are constructed in code rather than one arriving
