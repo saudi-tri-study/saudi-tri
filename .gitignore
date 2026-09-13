@@ -4,10 +4,7 @@
 .RData
 .Rproj.user/
 
-# Raw GOSI microdata — 891 MB, exceeds GitHub's 100 MB per-file limit.
-# Must be distributed via a repository that handles large files (e.g. Dataverse),
-# not via Git. See README "Obtaining the data".
-Data/Saudi gosi 2018-22.dta
+# Raw GOSI microdata is tracked via Git LFS (see .gitattributes)
 
 # R's default graphics device writes this on every Rscript run
 Rplots.pdf

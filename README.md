@@ -5,9 +5,10 @@ for decarbonization? Evidence from occupational transition risk in Saudi Arabia.
 
 ## Running it
 
-1. Install R (≥ 4.1).
-2. Place `Saudi gosi 2018-22.dta` in `Data/` (see "Obtaining the data" below — it
-   is too large for Git and is not in this repository).
+1. Install R (≥ 4.1) and [Git LFS](https://git-lfs.com) (`brew install git-lfs`,
+   then `git lfs install`). The GOSI data file is stored with LFS; without it you
+   will clone a small pointer file instead of the data.
+2. Clone the repository. The 891 MB data file downloads with it.
 3. Open `saudi-tri.Rproj` in RStudio and run `R/analysis.R`.
 
 From a terminal instead:
@@ -45,7 +46,7 @@ Full provenance — source, vintage, licence and known gaps — is in
 
 | File | Source | In Git? |
 |---|---|---|
-| `Data/Saudi gosi 2018-22.dta` | GOSI administrative employment records, 2018–2022 | **No** — storage TBD |
+| `Data/Saudi gosi 2018-22.dta` | GOSI administrative employment records, 2018–2022 | Yes — via Git LFS |
 | `Data/saudi_emission_intensity_and_greenjob_potential.xlsx` | IMF emission intensity (sheet 1); Rutzer et al. green potential (sheet 3) | Yes |
 | `Data/saudi_unemp_19_22_q4_orig.xlsx` | Saudi LFS regional unemployment, 2019Q4 / 2022Q4 (sheet 3) | Yes |
 | `Data/ISCO.xlsx` | ISCO-08 code → label lookup (sheet `ISCO_08`) | Yes |
@@ -53,8 +54,8 @@ Full provenance — source, vintage, licence and known gaps — is in
 
 ### Obtaining the data
 
-The GOSI microdata file is 891 MB and is not in this repository. Where it will be
-stored is to be decided.
+The GOSI microdata file is 891 MB and is tracked with Git LFS rather than stored
+directly in Git. Clone with Git LFS installed and it arrives with the repository.
 
 ## Outputs
 

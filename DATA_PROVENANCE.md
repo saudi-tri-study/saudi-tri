@@ -9,7 +9,7 @@ the script does with it.
 
 | File | Pillar | Source | Vintage |
 |---|---|---|---|
-| `Saudi gosi 2018-22.dta` | employment weights | GOSI via Saudi National Labor Observatory (storage TBD) | 2019 & 2022 year-end |
+| `Saudi gosi 2018-22.dta` | employment weights | GOSI via Saudi National Labor Observatory | 2019 & 2022 year-end |
 | `saudi_emission_intensity_and_greenjob_potential.xlsx` (sheet 1) | sector carbon exposure | IMF Climate Change Indicators Dashboard | 2018 |
 | `saudi_emission_intensity_and_greenjob_potential.xlsx` (sheet 3) | occupational adaptability | Rutzer, Niggli & Weder (2020) | n/a (task-based) |
 | `saudi_unemp_19_22_q4_orig.xlsx` (sheet 3) | regional labour frictions | GASTAT Labour Force Survey | 2019Q4, 2022Q4 |
@@ -20,7 +20,7 @@ the script does with it.
 
 ## 1. GOSI employment microdata
 
-- **File** `Data/Saudi gosi 2018-22.dta` (891 MB, not in this repository)
+- **File** `Data/Saudi gosi 2018-22.dta` (891 MB, tracked with Git LFS)
 - **Source** General Organization for Social Insurance (GOSI), obtained via Saudi
   Arabia's National Labor Observatory (NLO).
 - **Coverage** Private-sector employment. Occupation at 4-digit SSCO, economic
@@ -30,7 +30,6 @@ the script does with it.
 - **Vintage** Filtered by the script to the 2019-12-31 and 2022-12-31 snapshots.
 - **Used for** `numberofemployees`, the frequency weight behind every aggregate in
   the paper, and the ISCO3 × sector × region × gender cell structure.
-- **Storage** To be decided; the file is not in this repository.
 - **Manuscript citation** Described in §3.2; no formal data citation at present.
 
 ## 2. Sector emission intensity — IMF
