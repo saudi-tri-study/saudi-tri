@@ -1,0 +1,25 @@
+# OS / R cruft
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+
+# Raw GOSI microdata — 891 MB, exceeds GitHub's 100 MB per-file limit.
+# Must be distributed via a repository that handles large files (e.g. Dataverse),
+# not via Git. See README "Obtaining the data".
+Data/Saudi gosi 2018-22.dta
+
+# R's default graphics device writes this on every Rscript run
+Rplots.pdf
+
+# Region polygons: GPL-2.0 upstream, fetched by the script on first run
+Data/saudi_geo/
+
+# Manuscript draft - kept locally, not part of the public package
+Draft.pdf
+
+# RStudio markdown previews
+*.html
+
+# Local working notes - never committed
+*.local.md
