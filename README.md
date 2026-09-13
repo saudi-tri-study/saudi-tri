@@ -27,7 +27,7 @@ The region maps (6 MB) are downloaded on first run rather than redistributed
 here, because the source repository is GPL-2.0 licensed. This is the script's only
 network dependency.
 
-A full run takes a few minutes, most of it reading the 891 MB `.dta`.
+A full run takes under a minute, most of it reading the 891 MB `.dta`.
 
 ## Layout
 
@@ -41,8 +41,8 @@ outputs/tables/                Table 2's values, regenerated on every run
 
 ## Data
 
-Full provenance — source, vintage, licence and known gaps — is in
-[`DATA_PROVENANCE.md`](DATA_PROVENANCE.md).
+Full provenance — source, vintage, and what the script does with each input —
+is in [`DATA_PROVENANCE.md`](DATA_PROVENANCE.md).
 
 | File | Source | In Git? |
 |---|---|---|
